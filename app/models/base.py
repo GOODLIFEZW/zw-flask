@@ -6,6 +6,7 @@ db = SQLAlchemy()
 migrate = Migrate()
 
 class Base(db.Model):
+    __abstract__ = True
 
     def set_attrs(self, attrs_dict):
         for key, value in attrs_dict.items():
